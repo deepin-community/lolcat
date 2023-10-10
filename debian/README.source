@@ -1,0 +1,10 @@
+lolcat for Debian
+-----------------
+
+This package's sources is fetched from the git repository at [1]; the upstream
+tarballs are generated from that so they match perfectly.
+
+The package itself is maintained in git as described in the Vcs- fields in
+debian/control.
+
+[1] https://github.com/busyloop/lolcat.git

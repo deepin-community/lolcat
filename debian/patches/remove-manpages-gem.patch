@@ -1,0 +1,18 @@
+Description: we don't need the manpages gem.
+ We already installed the manpage in the proper location.
+Author: Sophie Brun <sophie@offensive-security.com>
+Forwarded: not-needed
+Date: Fri, 13 Mar 2020 15:47:42 +0100
+Last-Update: 2020-03-13
+
+--- a/lolcat.gemspec
++++ b/lolcat.gemspec
+@@ -14,7 +14,7 @@
+   s.add_development_dependency "rake"
+   s.add_dependency "paint", "~> 2.1"
+   s.add_dependency "optimist", "~> 3.0.0"
+-  s.add_dependency "manpages", "~> 0.6.1"
++#  s.add_dependency "manpages", "~> 0.6.1"
+ 
+   s.files         = `git ls-files`.split("\n")
+   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
