@@ -1,0 +1,18 @@
+Description: drop 'require "rubygems"'
+ dependencies are managed by apt, no need for rubygems, and it can cause
+ strange effects. (as suggested by cedric.boutillier in
+ <20130220223651.GC18010@spin> on <debian-ruby@lists.debian.org>
+Author: Christian M. Amsüss <chrysn@fsfe.org>
+Forwarded: not-needed
+Last-Update: 2013-02-21
+
+--- a/bin/lolcat
++++ b/bin/lolcat
+@@ -25,7 +25,6 @@
+ # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 
+-require "rubygems"
+ require "lolcat/version"
+ require "lolcat/cat"
+ 

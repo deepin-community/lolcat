@@ -1,4 +1,9 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@
+	dh $@ --buildsystem=ruby --with ruby
+
+override_dh_auto_install:
+	dh_auto_install
+	# dh_ruby seems not to have an option for moving binaries, doing it manually
+	mv debian/lolcat/usr/bin debian/lolcat/usr/games

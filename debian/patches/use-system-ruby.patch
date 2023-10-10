@@ -1,0 +1,14 @@
+Description: Use system ruby.
+Author: Utkarsh Gupta <utkarsh@debian.org>
+Bug: https://github.com/busyloop/lolcat/issues/76
+Bug-Debian: https://bugs.debian.org/836206
+Last-Update: 2020-03-30
+
+--- a/bin/lolcat
++++ b/bin/lolcat
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ 
+ # Copyright (c) 2016, moe@busyloop.net
+ # All rights reserved.

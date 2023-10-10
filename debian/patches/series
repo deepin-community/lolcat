@@ -1,0 +1,4 @@
+00-no-rubygems
+remove-manpages-gem.patch
+Don-t-use-git-ls.patch
+use-system-ruby.patch

@@ -1,15 +1,28 @@
-Source: template-repository
-Section: unknown
+Source: lolcat
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Christian M. Amsüss <chrysn@fsfe.org>,
+           Utkarsh Gupta <utkarsh@debian.org>
+Section: games
+Testsuite: autopkgtest-pkg-ruby
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 12),
+               gem2deb
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/ruby-team/lolcat
+Vcs-Git: https://salsa.debian.org/ruby-team/lolcat.git
+Homepage: https://github.com/busyloop/lolcat
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: lolcat
+Architecture: all
+XB-Ruby-Versions: all
+Depends: ruby | ruby-interpreter,
+         ruby-paint (>= 2.1),
+         ruby-optimist,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: colorful `cat`
+ lolcat concatenates files like the UNIX `cat` program, but colors it for the
+ lulz in a rainbow animation. Terminals with 256 colors and animations are
+ supported.
